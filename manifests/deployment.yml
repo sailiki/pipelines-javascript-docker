@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sailikipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sailikipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sailikipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sailikipipelinesjavascriptdocker 
+          image: sailiki.azurecr.io/sailikipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
